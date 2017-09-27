@@ -4,11 +4,10 @@ class Person
   def initialize(name, age)
     @name = name
     @age = age
+    @nickname = @name[0, 4]
   end
 
-  def nickname
-    @name[0, 4]
-  end
+  attr_reader :nickname
 
   def birth_year
     Time.now.year - age.to_i
